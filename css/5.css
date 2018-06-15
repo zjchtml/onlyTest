@@ -1,0 +1,6 @@
+div{position: relative;margin:50px;width: 320px;height: 320px;}
+img{position: absolute;border: 3px black solid;width: 144px;height: 144px;cursor: pointer;}
+#img1{left: 0;top: 0;}
+#img2{right: 0;top: 0;}
+#img3{left: 0;bottom: 0;}
+#img4{right: 0;bottom: 0;}

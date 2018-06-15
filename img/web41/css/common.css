@@ -1,0 +1,50 @@
+*{
+	margin:0px;
+	padding: 0px;
+}
+div{
+	color:#fff;
+	font-size: 40px;
+	font-weight:bold;
+}
+#banner{
+	width:100%;
+	height: 300px;
+	background-color: #f00;	
+	position: absolute;
+	top:0px;
+	left: 0px;
+}
+#nav{
+	width:100%;
+	height: 150px;
+	background-color: #faa;
+	position: absolute;
+	top:300px;
+	left: 0px;
+}
+#left{
+	width:30%;
+	height: 1000px;
+	float: left;
+	position: absolute;
+	left: 0px;
+	top: 450px;
+}
+#right{
+	width:70%;
+	height: 1000px;
+	background-color:#ff0;
+	position: absolute;
+	top:450px;
+	right:0;
+}
+#footer{
+	width:100%;
+	height: 200px;
+	background-color: #f0f;
+	clear:both;
+	position: absolute;
+	left: 0px;
+	top:1450px;
+}

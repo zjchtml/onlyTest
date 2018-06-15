@@ -1,0 +1,9 @@
+function(){
+	for(i=0;i<10;i++){
+		if(i%2==0){
+			d=createElement("div");
+			d.className="one";
+			d.innerHTML=(i+1);
+		}else{}
+	}
+}

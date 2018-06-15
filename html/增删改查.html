@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+<form action="#">
+  用户名：<input type="text" id="username"><br>
+   密码：<input type="password" id="pwd"><br>
+   查询：<select id="sel">
+   	<option value="username">用户名</option>
+   	<option value="pwd">密码</option>
+   </select>
+   <span id="txt"></span>
+   </form>
+</body>
+<script type="text/javascript">
+	var us=document.getElementById("username");
+	var pw=document.getElementById('pwd');
+	var sel=document.getElementById('sel');
+	var txt=document.getElementById('txt');
+	// if(us.value && pw.value){
+	// 	sessionStorage.username=us.value;
+	// 	sessionStorage.pwd=pw.value;
+	// }
+	us.onchange=function(){
+		localStorage.username=this.value;
+		// alert("nihao");		
+	}
+	pw.onchange=function(){
+		localStorage.pwd=this.value;
+	}
+	sel.onchange=function(){
+		if(this.value=="username"){
+			txt.innerHTML=localStorage.username;
+		}else if(this.value=="pwd"){
+			txt.innerHTML=localStorage.pwd;
+		}else{
+			txt.innerHTML="";
+		}
+	}
+</script>
+</html>

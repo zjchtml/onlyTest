@@ -1,0 +1,19 @@
+$(function(){
+	$("#nav").children("li").navigation("ul");
+})
+$.fn.navigation=function(_children){
+	this.hover(function(){
+		$(this).children(_children).slideDown(1000);},
+	function(){
+		$(this).children(_children).slideUp(1000);}	
+	)
+}
+$.fn.extend({
+	navigation:function(_children){
+		this.hover(function(){
+		$(this).children(_children).slideDown(1000);},
+	function(){
+		$(this).children(_children).slideUp(1000);}	
+	)
+	}
+})

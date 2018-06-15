@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		#d3{width: 50px;
+		    height: 50px;
+		    float: left;
+		    background-color: #f00;}
+		#d2{width: 100px;
+		    height: 100px;
+		    float: left;
+		    background-color: #ff0;}
+		#d1{width: 150px;
+		    height: 150px;
+		    float: left;
+		    background-color: #00f;}
+	</style>
+</head>
+<body>
+     <div id="d1">
+     	<div id="d2">
+     		<div id="d3">
+     			
+     		</div>
+     	</div>
+     </div>
+</body>
+    <script type="text/javascript">
+    	document.getElementById("d1").onclick=function(){alert("div1");}
+    	document.getElementById("d2").onclick=function(e){
+    		e=e || window.event;
+    		alert("div2");
+    		e.stopPropagation();
+    	}
+    	document.getElementById("d3").onclick=function(e){
+    		e=e || window.event;
+    		alert("div3");
+    		e.stopPropagation();
+    	}
+    </script>
+</html>

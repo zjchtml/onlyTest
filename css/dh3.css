@@ -1,0 +1,3 @@
+#nav{list-style-type: none;}
+#nav>li{float: left;width: 100px;height: 30px;}
+#nav>li>ul{display: none;}

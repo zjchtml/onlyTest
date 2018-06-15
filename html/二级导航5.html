@@ -1,0 +1,44 @@
+<html>
+<head>
+<meta charset="utf-8">
+	
+	<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+	<style type="text/css">
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+<ul id="nav">
+    	<li>导航<ul>
+    		<li>123</li>
+    		<li>456</li>
+    		<li>789</li>
+    	</ul></li>
+    	<li>导航<ul>
+    		<li>123</li>
+    		<li>456</li>
+    		<li>789</li>
+    	</ul></li>
+    	<li>导航<ul>
+    		<li>123</li>
+    		<li>456</li>
+    		<li>789</li>
+    	</ul></li>
+    </ul>
+</body>
+<script type="text/javascript">
+	$(function(){
+		$.navigation($("#nav").children("ul").children("li"),"ul")
+	})
+	$.extend({
+		navigation:function(_selector,_children){
+			_selector.hover(function(){
+				$(this).children(_children).slideDown(1000);
+			},function(){
+				$(this).children(_children).slideUp(1000);
+			})
+		}
+	})
+</script>
+</html>

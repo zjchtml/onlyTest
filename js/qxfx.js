@@ -1,0 +1,13 @@
+$(function(){
+$("#btn1").click(function(){
+	$(":checkbox").attr("checked",true);
+})
+$("#btn3").click(function(){
+	$(":checkbox").removeAttr("checked");
+})
+$("#btn2").click(function(){
+	$(":checkbox").each(function(){
+		this.checked=!this.checked;
+	})
+})
+})

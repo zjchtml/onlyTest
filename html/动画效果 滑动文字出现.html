@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		*{margin: 0;padding:0;}
+		div{
+			width:200px;height: 150px;background-color:#ccc;border: #888 solid 1px;border-radius: 20px;color: #000;font-weight: bold;
+			text-align: center;position: relative;left: 0px;animation: three 2s forwards;
+		}
+		span{display: block;width: 5px;height: 5px;background-color: #f00;position: absolute;top: 50%;margin-top: -2.5px;}
+		.left{left: 0px;animation: one 2s forwards 2s;}
+		.right{right: 0px;animation: one 2s forwards 2s;}
+		#text{margin-top: 0px;position: absolute;left: 50%;margin-left: -35px;width: 70px;opacity: 0;animation: two 2s forwards 2s;}
+		@keyframes one{
+			0%{width: 5px;}
+		
+		   100%{width: 55px;}
+		}
+		@keyframes two{
+			0%{margin-top: 0px;
+			   opacity: 0;}
+			100%{margin-top: 65px;
+			   opacity: 1;}
+		}
+		@keyframes three{
+			0%{left: 0px;}
+			100%{left: 200px;}
+		}
+	</style>
+</head>
+<body>
+    <div id="box">
+    	<span class="left"></span>
+    	<p id="text">网站41班</p>
+    	<span class="right"></span>
+    </div>
+</body>
+</html>

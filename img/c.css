@@ -1,0 +1,16 @@
+ul{list-style-type:none;
+width:400px;
+height:40px;}
+li{
+	float:left;
+	margin: 10px;
+
+line-height:40px;
+text-align:center;}
+a{display:block;
+	height:40px;
+	width:40px;
+	line-height: 40px;
+
+	background:url("1.jpg") no-repeat;
+	text-decoration:none;}

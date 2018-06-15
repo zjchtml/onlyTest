@@ -1,0 +1,14 @@
+$(document).ready(function(){
+	$("#nav").children("li").mouseover(function(){
+		$(this).children("ul").fadeIn().end().siblings().children("ul").fadeOut();
+})
+	$("#nav").children("li").children("ul").children("li").mouseover(function(){
+		$(this).children("ul").fadeIn().end().siblings().children("ul").fadeOut();
+})
+	$("#nav").children("li").mouseout(function(){
+		$(this).children("ul").fadeOut().end().siblings().children("ul").fadeIn();
+})
+	$("#nav").children("li").children("ul").children("li").mouseout(function(){
+		$(this).children("ul").fadeOut().end().siblings().children("ul").fadeIn();
+})
+})

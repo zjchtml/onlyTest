@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/jquery.fullPage.css">
+	
+	<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="../js/jquery.easings.min.js"></script>
+</head>
+<body>
+ <div id="fullpage">
+  <div class="section">这是第一屏</div>  
+  <div class="section">这是第二屏</div>
+  <div class="section">
+  <div class="slide">第三屏的第一屏</div>
+  <div class="slide">第三屏的第二屏</div>
+  <div class="slide">第三屏的第三屏</div>
+  <div class="slide">第三屏的第四屏</div>
+</div>
+<div class="section">这是最后一屏</div>
+<div>
+</body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#fullpage").fullpage();
+	})
+</script>
+</html>

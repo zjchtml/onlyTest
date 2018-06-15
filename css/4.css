@@ -1,0 +1,6 @@
+body{padding: 50px;}
+div{margin: 5px 0;float: left;}
+p{float: left;margin: 0;padding: 0;width: 46px;height: 46px;border: 2px black solid;color: black;background-color: gold;float: left;font:bold 30px/46px Arial;text-align: center;}
+span{width: 0;height: 0;display: block;cursor: pointer;float: left;border: 25px white solid;border-left-width: 7px;border-right-width: 7px;}
+span.left{border-right-color: black;}
+span.right{border-left-color: black;}

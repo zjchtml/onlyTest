@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+  <img src="../img/2.jpg" width="200" height="200" id="pic" onmouseover="test(0,'pic','400','400','200','200')" onmouseout="test(1,'pic','400','400','200','200')">
+</body>
+<script type="text/javascript">
+	function test(i,j,w1,h1,w2,h2){
+		switch(i){
+			case 0:
+			document.getElementById(j).width=w1;
+			document.getElementById(j).height=h1;
+            break;
+            case 1:
+            document.getElementById(j).width=w2;
+            document.getElementById(j).height=h2;
+            break;
+		}
+	}
+</script>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>fullpage练习</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/index.css">
+	<link rel="stylesheet" type="text/css" href="../css/jquery.fullpage.min.css">
+	<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.fullPage.js"></script>
+</head>
+<body>
+	<ul id="menu">
+		<li data-menuanchor="page1"><a href="#page1">第一屏</a></li>
+		<li data-menuanchor="page2"><a href="#page2">第二屏</a></li>
+		<li data-menuanchor="page3"><a href="#page3">第三屏</a></li>
+		<li data-menuanchor="page4"><a href="#page4">第四屏</a></li>
+	</ul>
+	<div id="fullpage">
+		<div class="section section1">
+			<h3>第一屏</h3>
+		</div>
+		<div class="section section2">
+			<h3>第二屏</h3>
+		</div>
+		<div class="section section3">
+			<h3 class="slide">第三屏第一屏</h3>
+			<h3 class="slide">第三屏第二屏</h3>
+			<h3 class="slide">第三屏第三屏</h3>
+			<h3 class="slide">第三屏第四屏</h3>
+		</div>
+		<div class="section section4">
+			<h3>第四屏</h3>
+		</div>
+	</div>
+	<div id="next">
+			<p>下一页</p>
+		</div>
+</body>
+<script type="text/javascript">
+	$(function(){
+		$("#fullpage").fullpage({
+		sectionsColor:["#f00","#123","#efg","#0ff"],
+		loopBottom:true,
+		loopTop:true,
+		controlArrowColor:"#ff0",
+		scrollingSpeed:2000,
+		css3:true,
+		anchors:["page1","page2","page3","page4"],
+		menu:"#menu",                     
+		// 绑定到菜单
+		navigation:true,
+		navigationPosition:"left",
+		// fixedElements:"#next",
+		navigationTooltips:["首页","产品介绍","联系我们","加入我们"],
+		afterLoad:function(anchorLink,index){  //代表进入第二个屏之后
+			//index代表section的索引值滚动到屏的索引值
+			if(index==2){
+				// $(".section2 h3").fadeIn(1000);
+				$(".section2 h3").animate({"left":"50%"},1000);
+			}
+		},
+		onLeave:function(index,nextIndex,direction){  //代表离开第二个屏之后
+			if(index==2){
+				$(".section2 h3").animate({"left":"-20%"},2000);
+			}
+		},
+		afterRender:function(){
+			$(".section4 h3").fadeIn(5000);
+		}
+	});
+	$("#next p").click(function(){
+			$.fn.fullpage.moveSectionDown();  
+			// 单击显示下一屏 up是上一屏
+		})
+})
+	
+</script>
+</html>

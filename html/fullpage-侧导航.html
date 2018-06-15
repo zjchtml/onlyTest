@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../css/jquery.fullPage.css">
+	<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.fullPage.js"></script>
+	<style type="text/css">
+	    *{margin: 0;padding: 0;}
+		.section1{background-color: #f00;}
+		.section2{background-color: #0f0;}
+		.section3{background-color: #00f;}
+		#menu li{float: left;list-style-type: none;background-color: #0ff;}
+		#menu li a{display: block;width: 130px;height: 40px;line-height: 40px;text-align: center;font-weight: bold;
+		text-decoration: none;}
+		#menu li.active{background-color: #fff;}
+		#menu li.active a{color: #f0f;}
+        #fp-nav ul li a.active span{
+        	background-color: #0f0;
+        }
+	</style>
+</head>
+<body>
+<div id="fullpage">
+	<div class="section section1"><ul id="menu">
+		<li data-menuanchor="page1"><a href="#page1"><span>1111</span></a></li>
+		<li data-menuanchor="page2"><a href="#page1"><span>2222</span></a></li>
+		<li data-menuanchor="page3"><a href="#page1"><span>3333</span></a></li>
+		<li data-menuanchor="page4"><a href="#page1"><span>4444</span></a></li>
+	</ul></div>
+	<div class="section section2">section2</div>
+	<div class="section section3">
+		<div class="slide slide1">section3-1</div>
+		<div class="slide slide2">section3-2</div>
+		<div class="slide slide3">section3-3</div>
+	</div>
+	
+</div>
+</body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#fullpage").fullpage({
+			navigation:true,
+			css3:true,
+			navigationTooltips:["page1","page2","page3"],
+			navigationPosition:"right",
+       
+		});
+		})
+</script>
+</html>

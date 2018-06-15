@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	body{
+		height:1500px;
+	}
+     div{
+     	width:50px;
+     	height:50px;
+     	background-color: #f00;
+     	color: #fff;
+     	position: absolute;
+     	bottom:0;
+     	right:0;
+     }
+	</style>
+</head>
+<body>
+ <div id="d1">123</div>
+ <p></p>
+</body>
+<script type="text/javascript">
+  var d=document.getElementById("d1");
+  var t=d.offsetTop;
+  var b=document.getElementsByTagName("body")[0];   
+  window.onscroll=function(){
+   	d.style.top=(b.scrollTop+t)+"px";
+}
+</script>
+</html>

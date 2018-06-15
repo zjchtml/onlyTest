@@ -1,0 +1,9 @@
+*{margin:0;padding: 0;}
+ul{list-style-type: none;}
+#nav>li{background: url("../img/tb1.png") no-repeat left top;
+width: 100px;
+line-height: 30px;
+text-align: center;
+background-color: #f00; }
+#nav>li>ul{display: none;}
+
