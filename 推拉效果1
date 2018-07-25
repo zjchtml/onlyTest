@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>智慧供应链</title>
+	<link rel="stylesheet" type="text/css" href="../css/chain.css">
+	<script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+</head>
+<body>
+
+    <div class="box">
+        <ul>
+            <li><img src="../img/z1.png"></li>
+            <li><img src="../img/z2.png"></li>
+            <li><img src="../img/z3.png"></li>
+            <li><img src="../img/z4.png"></li>
+            
+        </ul>
+    </div>
+</body>
+<style>
+ *{
+            padding: 0;
+            margin: 0;
+
+        }
+        .box{
+            /*收缩状态:缩放时每个图片的大小240px 所以总大小1200px*/
+            /*展开状态:当前图片宽度800px 其他图片宽度100px*/
+            width: 1800px;
+            height: 600px;
+            border:1px solid red;
+            margin: 50px auto;
+        }
+        .box ul{
+            list-style: none;
+            width: 1800px;
+        }
+        /*设置每一张图片的大小和float: left*/
+        .box ul li{
+            width: 240px;
+            height: 600px;
+            /*background: url(images/slidepic2.jpg);*/
+            float: left;
+        }
+
+</style>
+<script type="text/javascript">
+
+    $(function(){
+        //遍历每一张li  获取每个元素设置对应的图片
+        var lis = $('li');
+        lis.each(function(index, element){
+            //通过设置背景图片名称改变图片的显示
+            var imgName = "../img/a" + (index + 1) +".png ";
+            $(element).css('background', "url('"+ imgName +"')")
+        });
+        //展开状态
+        //鼠标滑入改变对应图片宽度800 其他图片(兄弟)改为100
+        lis.mouseenter(function(){
+            // console.log(this);  当前的li DOM元素
+            //当前的图片的宽度变为800
+            $(this).stop().animate({width: 1080});
+            //其他图片的宽度变为100
+            $(this).siblings('li').stop().animate({width: 240});
+        });
+        //鼠标滑出是全部显示为收缩状态
+        lis.mouseout(function(){
+            lis.stop().animate({width: 240});
+        });
+    })
+</script>
+</html>
