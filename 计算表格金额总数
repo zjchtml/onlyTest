@@ -1,0 +1,1 @@
+let sum_amount = (this.state.goodList || [{xxx: 0}]).map((i)=> i.xxx).reduce((x,y)=> x + y)  计算总金额
